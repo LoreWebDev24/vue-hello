@@ -9,7 +9,12 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
+        <div v-for="(string, idx) in strings" v-show="idx === currentIndex">
+            <h1>{{ string }}</h1>
+            <p>{{ idx }}</p>      
+        </div>
+        <button @click="decrease()">--</button>
+        <button @click="increase()">++</button>
     </div>
 
     <script src="./js/master.js"></script>

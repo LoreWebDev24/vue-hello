@@ -1,11 +1,21 @@
 // INTRO VUE JS 
 
-const { createApp } = Vue
+const { createApp } = Vue;
 
 createApp ({
     data() {
         return {
-            message: 'Ciao Belli !!'
+            'strings': ['Pippo', 'Pluto', 'Paperino', 'Minnie'],
+            'currentIndex': 0,
         }
-    }
+    },
+    methods: {
+        increase() {
+            this.currentIndex++;
+        },
+        decrease() {
+            this.currentIndex--;
+        }
+    },
 }).mount('#app')
+
